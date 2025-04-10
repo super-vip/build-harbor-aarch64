@@ -2,7 +2,7 @@ jobs:
   build-branches:
     environment:
       Harbor_Git_Tag: 'v2.13.0'
-      NODE: node:16
+      NODE: 'node:16'
     machine: true
     resource_class: arm.medium
     steps:
