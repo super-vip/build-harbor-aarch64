@@ -1,5 +1,7 @@
 GIT_BRANCH="v2.13.0"
 
+export NODE=node:16
+
 # first step: clone harbor ARM code
 git clone https://github.com/alanpeng/harbor-arm.git
 
@@ -28,4 +30,4 @@ make compile COMPILETAG=compile_golangimage
 
 # Build harbor arm image:
 # make build GOBUILDTAGS="include_oss include_gcs" BUILDBIN=true TRIVYFLAG=true GEN_TLS=true PULL_BASE_FROM_DOCKERHUB=false
-make build GOBUILDTAGS="include_oss include_gcs" BUILDBIN=true TRIVYFLAG=true GEN_TLS=true PULL_BASE_FROM_DOCKERHUB=false NODE=node:16
+make build GOBUILDTAGS="include_oss include_gcs" BUILDBIN=true TRIVYFLAG=true GEN_TLS=true PULL_BASE_FROM_DOCKERHUB=false
