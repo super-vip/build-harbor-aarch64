@@ -1,7 +1,5 @@
 GIT_BRANCH="v2.13.0"
 
-export NODE=node:16
-
 # first step: clone harbor ARM code
 git clone https://github.com/alanpeng/harbor-arm.git
 
@@ -24,6 +22,8 @@ make prepare_arm_data
 
 # Replace build arm image parameters：
 make pre_update
+
+sed -i 's|FROM ${NODE}|FROM node:16.18.0|' src/github.com/goharbor/harbor/make/photon/portal/Dockerfile
 
 # Compile harbor components:
 make compile COMPILETAG=compile_golangimage
