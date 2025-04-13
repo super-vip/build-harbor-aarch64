@@ -9,12 +9,12 @@ How to get the harbor-offline-installer-aarch64 package?
 ### Option2 （方法二）
 下载离线镜像包
 ```
-docker pull alanpeng/harbor_images_aarch64:v2.13.0
+docker pull yfcdocker/harbor_images_aarch64:v2.13.0
 ```
 
 创建一个新的容器实例
 ```
-TEMP_CONTAINER_ID=$(docker create alanpeng/harbor_images_aarch64:v2.13.0 /bin/true)
+TEMP_CONTAINER_ID=$(docker create yfcdocker/harbor_images_aarch64:v2.13.0 /bin/true)
 ```
 
 从容器中拷贝文件
@@ -53,7 +53,7 @@ install.sh
 
 对于如何使用CircleCI，其实是和TravisCI这样的平台极其类似的，具体可参考这篇文章内容：https://mp.weixin.qq.com/s/PlBvzDlPQbnYTmyQoSLD5Q
 
-如果你希望自己及时构建自己的Harbor ARM64镜像，最简单的方法是fork本项目到你自己github账号，然后修改代码里的镜像名称前缀 alanpeng/ 为你自己的即可。
+如果你希望自己及时构建自己的Harbor ARM64镜像，最简单的方法是fork本项目到你自己github账号，然后修改代码里的镜像名称前缀 yfcdocker/ 为你自己的即可。
 
 涉及变更的文件有：
 
