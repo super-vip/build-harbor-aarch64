@@ -30,3 +30,4 @@ make compile COMPILETAG=compile_golangimage
 
 # Build harbor arm image:
 make build GOBUILDTAGS="include_oss include_gcs" BUILDBIN=true TRIVYFLAG=true GEN_TLS=true PULL_BASE_FROM_DOCKERHUB=false
+
